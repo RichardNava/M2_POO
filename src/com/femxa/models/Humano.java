@@ -1,15 +1,15 @@
 package com.femxa.models;
 
-public class Persona  {
+public class Humano  {
     //CLASS FIELDS 
-    private String nombre; //package-private
+    private String nombre; 
     private String apellido;
-    private String NIF;
-    private float peso;
-    private float altura;
+    protected String NIF;
+    public float peso;
+    float altura; // package-private
     
     // CONSTRUCTORES
-    public Persona(String nombre, String apellido, String NIF, float peso, float altura) {
+    public Humano(String nombre, String apellido, String NIF, float peso, float altura) {
         super();
         this.nombre = nombre;
         this.apellido = apellido;
@@ -18,7 +18,7 @@ public class Persona  {
         this.altura = altura;
     }
 
-    public Persona() {
+    public Humano() {
     }
     //Accessors Methods (Getters&Setters)
 
@@ -61,11 +61,20 @@ public class Persona  {
     public void setAltura(float altura) {
         this.altura = altura;
     }
-    
-    
 
-    
-    
+    @Override
+    public String toString() {
+        return nombre +":"+ 
+               "\n\tApellido=" + apellido + 
+               "\n\tNIF=" + NIF + 
+               "\n\tPeso=" + peso + 
+               "\n\tAltura=" + altura;
+    }
+
+    void luchar(){
+        System.out.println("Hago daño");
+    }
+
     
     
 }
