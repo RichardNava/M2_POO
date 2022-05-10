@@ -71,7 +71,7 @@ public class Humano  {
                "\n\tAltura=" + altura;
     }
 
-    void luchar(){
+    public void luchar(){
         System.out.println("Hago daño");
     }
 

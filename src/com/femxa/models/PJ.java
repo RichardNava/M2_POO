@@ -65,5 +65,4 @@ public class PJ extends Humano{
                "\nResistencia=" + resistencia;
     }
 
-    
 }
